@@ -103,6 +103,9 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     //AleC function (homeHtml) {
     function (homeHtmlUrl) {
+      // AleC - Switch CSS class active to menu button
+      switchMenuToActive();
+      
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
@@ -122,24 +125,18 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = document.querySelector("#specials-tile").className;
-/**
-      var html = "<div class='text-center'>";
-      html += "<img src='images/ajax-loader.gif'></div>";
-**/
-      
-      var html = homeHtmlToInsertIntoMainPage;
-        insertProperty(html,
-                       "short_name",
-                       chosenCategoryShortName);
-      homeHtmlToInsertIntoMainPage += html;
+      var homeHtmlToInsertIntoMainPage = 
+            buildCategoriesViewHtml(categories,
+                                    categoriesTitleHtml,
+                                    homeHtmlUrl);
+
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
-      insertHtml("#specials-tile", homeHtmlToInsertIntoMainPage);
-    },
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+    }, //close function
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 
 }
