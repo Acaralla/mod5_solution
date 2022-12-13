@@ -126,23 +126,19 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = "";
-
-      var finalHtml = "<section class='row'>";
+      var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content");
       
-
- 
-      // Insert category values
       var name = "" + chosenCategoryShortName.name;
       var short_name = chosenCategoryShortName.short_name;
-     
       var queryUrlImage = "images/menu/" + short_name + "/" + short_name + ".jpg";
-      var homeHtmlToInsertIntoMainPage = "<div class='text-center'>";
-      homeHtmlToInsertIntoMainPage += "<img width='200' height='200'";
-      homeHtmlToInsertIntoMainPage += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
+      
+      var htmlCategory = "<div class='text-center'>";
+      htmlCategory += "<img width='200' height='200'";
+      htmlCategory += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
  
       
-      console.log(homeHtmlToInsertIntoMainPage);
+      console.log(htmlCategory);
+      homeHtmlToInsertIntoMainPage += htmlCategory;
    
       
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
