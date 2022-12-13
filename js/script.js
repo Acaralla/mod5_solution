@@ -14,8 +14,8 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
-var allCategoriesUrl =
-  "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
+var allCategoriesUrl = "data/name.json";
+ //AleC "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
@@ -63,28 +63,41 @@ var switchMenuToActive = function () {
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
 
-// TODO: STEP 0: Look over the code from
-// *** start ***
-// to
-// *** finish ***
-// below.
-// We changed this code to retrieve all categories from the server instead of
-// simply requesting home HTML snippet. We now also have another function
-// called buildAndShowHomeHTML that will receive all the categories from the server
-// and process them: choose random category, retrieve home HTML snippet, insert that
-// random category into the home HTML snippet, and then insert that snippet into our
-// main page (index.html).
-//
-// TODO: STEP 1: Substitute [...] below with the *value* of the function buildAndShowHomeHTML,
-// so it can be called when server responds with the categories data.
+  // TODO: STEP 0: Look over the code from
+  // *** start ***
+  // to
+  // *** finish ***
+  // below.
+  // We changed this code to retrieve all categories from the server instead of
+  // simply requesting home HTML snippet. We now also have another function
+  // called buildAndShowHomeHTML that will receive all the categories from the server
+  // and process them: choose random category, retrieve home HTML snippet, insert that
+  // random category into the home HTML snippet, and then insert that snippet into our
+  // main page (index.html).
+  //
+  // TODO: STEP 1: Substitute [...] below with the *value* of the function buildAndShowHomeHTML,
+  // so it can be called when server responds with the categories data.
 
-// *** start ***
-// On first load, show home view
-showLoading("#main-content");
-$ajaxUtils.sendGetRequest(
-  allCategoriesUrl,
-  [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
-  true); // Explicitly setting the flag to get JSON from server processed into an object literal
+  // *** start ***
+  // On first load, show home view
+  showLoading("#main-content");
+  /**
+  $ajaxUtils.sendGetRequest(
+    allCategoriesUrl,
+    [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
+    true); // Explicitly setting the flag to get JSON from server processed into an object literal
+    **/
+          // Call server to get the name
+        $ajaxUtils
+          .sendGetRequest(allCategoriesUrl, 
+            function (res) {
+              var message = 
+                res.name;
+
+              document.querySelector("#main-content")
+                .innerHTML = "<h2>" + message + "</h2>";
+            });
+      });
 });
 // *** finish **
 
