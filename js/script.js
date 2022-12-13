@@ -81,15 +81,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // *** start ***
   // On first load, show home view
   showLoading("#main-content");
-  /**
+
   $ajaxUtils.sendGetRequest(
     allCategoriesUrl,
+    /**
     [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
     true); // Explicitly setting the flag to get JSON from server processed into an object literal
     **/
-          // Call server to get the name
-        $ajaxUtils
-          .sendGetRequest(allCategoriesUrl, 
+
             function (res) {
               var message = 
                 res.name;
@@ -97,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
               document.querySelector("#main-content")
                 .innerHTML = "<h2>" + message + "</h2>";
       });
+  
 });
 // *** finish **
 
