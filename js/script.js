@@ -137,17 +137,16 @@ function buildAndShowHomeHTML (categories) {
       // of how to do that.
       // ....
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
-
+    },
+    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+}
       
       /**
           showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + chosenCategoryShortName + ".json",
     homeHtmlUrl);
-    },
-    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
-    **/
-}
+*/
 
 
 // Given array of category objects, returns a random category object.
