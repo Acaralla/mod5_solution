@@ -102,7 +102,7 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort + ".json",
     buildAndShowMenuItemsHTML);
-};
+
   /***
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
