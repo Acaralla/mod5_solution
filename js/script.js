@@ -159,7 +159,8 @@ function buildAndShowHomeHTML (categories) {
       ***/
       
       
-      var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content");
+      var homeHtmlToInsertIntoMainPage = document.querySelector("#text-center");
+      console.log(homeHtmlToInsertIntoMainPage);
       homeHtmlToInsertIntoMainPage =
         insertProperty(homeHtmlToInsertIntoMainPage, "src", 
                        "images/menu/" + short_name + "/" + short_name + name + ".jpg");
