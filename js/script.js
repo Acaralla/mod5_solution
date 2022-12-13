@@ -145,6 +145,7 @@ function buildAndShowHomeHTML (categories) {
     var html = document.querySelector("#main-content");
     console.log(html);
     var name = "" + categories[i].name;
+    var id = "" + categories[i].id;
     var short_name = categories[i].short_name;
     html =
       insertProperty(html, "name", name);
@@ -158,7 +159,7 @@ function buildAndShowHomeHTML (categories) {
   homeHtmlToInsertIntoMainPage += "</section>";
       ***/
       
-      var queryUrlImage = "images/menu/" + short_name + "/" + short_name + name + ".jpg";
+      var queryUrlImage = "images/menu/" + short_name + "/" + short_name + id + ".jpg";
       var homeHtmlToInsertIntoMainPage = "<div class='text-center'>";
       homeHtmlToInsertIntoMainPage += "<img src='" + queryUrlImage + "'></div>";
  
