@@ -88,9 +88,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
     true); // Explicitly setting the flag to get JSON from server processed into an object literal
     **/
+    buildAndShowHomeHTML,
+    true);
 
-
-    buildAndShowMenuItemsHTML);
+    //buildAndShowMenuItemsHTML);
 
   
 });
