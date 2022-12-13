@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
               document.querySelector("#main-content")
                 .innerHTML = "<h2>" + message + "</h2>";
-            });
       });
 });
 // *** finish **
