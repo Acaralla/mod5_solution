@@ -158,12 +158,13 @@ function buildAndShowHomeHTML (categories) {
   homeHtmlToInsertIntoMainPage += "</section>";
       ***/
       
+      var queryUrlImage = "images/menu/" + short_name + "/" + short_name + name + ".jpg";
+      var homeHtmlToInsertIntoMainPage = "<div class='text-center'>";
+  html += "<img src='" + queryUrlImage + "'></div>";
+ 
       
-      var homeHtmlToInsertIntoMainPage = document.querySelector("#text-center");
       console.log(homeHtmlToInsertIntoMainPage);
-      homeHtmlToInsertIntoMainPage =
-        insertProperty(homeHtmlToInsertIntoMainPage, "src", 
-                       "images/menu/" + short_name + "/" + short_name + name + ".jpg");
+   
       
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
