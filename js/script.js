@@ -126,17 +126,18 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content");
-      
+      var homeHtmlToInsertIntoMainPage = homeHtmlUrl; //document.querySelector("#main-content");
+      var htmlCategory = "";
+      /*
       var name = "" + chosenCategoryShortName.name;
       var short_name = chosenCategoryShortName.short_name;
       var queryUrlImage = "images/menu/" + short_name + "/" + short_name + ".jpg";
       
-      var htmlCategory = "<div class='text-center'>";
+      htmlCategory = "<div class='text-center'>";
       htmlCategory += "<img width='200' height='200'";
       htmlCategory += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
  
-      
+      */
       console.log(htmlCategory);
       homeHtmlToInsertIntoMainPage += htmlCategory;
    
