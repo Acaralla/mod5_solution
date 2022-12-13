@@ -127,61 +127,21 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
       var homeHtmlToInsertIntoMainPage = "";
-       /**     buildCategoriesViewHtml(categories,
-                                    categoriesTitleHtml,
-                                    homeHtmlUrl);
-        **/
-      // var finalHtml = categoriesTitleHtml;
-   var finalHtml = "<section class='row'>";
+
+      var finalHtml = "<section class='row'>";
       
-      /**
-      
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-  <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
-    <div class="category-tile">
-      <img width="200" height="200" src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
-      <span>{{name}}</span>
-    </div>
-  </a>
-</div>
-**/
 
  
-    // Insert category values
-    var html = document.querySelector("#main-content"); //document.querySelector("#category-tile"); //categoryHtml;
-    var name = "" + chosenCategoryShortName.name;
-    var short_name = chosenCategoryShortName.short_name;
-      /**
-    html =
-      insertProperty(html, "name", name);
-    html =
-      insertProperty(html,
-                     "short_name",
-                     short_name);
-                     **/
-      /**
-          html =
-      insertProperty(html,
-                     "randomCategoryShortName",
-                     short_name);
-    finalHtml += html;
-  
-
-  finalHtml += "</section>";
-  homeHtmlToInsertIntoMainPage = finalHtml;
-      **/
-/**
-                 homeHtmlToInsertIntoMainPage =
-            buildCategoriesViewHtml(categories,
-                                    categoriesTitleHtml,
-                                    categoryHtml);
-      **/
+      // Insert category values
+      var name = "" + chosenCategoryShortName.name;
+      var short_name = chosenCategoryShortName.short_name;
+     
       homeHtmlToInsertIntoMainPage += "<section class='row'>";
 
   // Loop over categories
   for (var i = 0; i < categories.length; i++) {
     // Insert category values
-    var html = homeHtmlUrl;
+    var html = document.querySelector("#main-content");
     var name = "" + categories[i].name;
     var short_name = categories[i].short_name;
     html =
