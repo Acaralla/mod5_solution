@@ -97,13 +97,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
-/***buttare
-  var chosenCategoryShortName = chooseRandomCategory(categories);
-    showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
-    menuItemsUrl + chosenCategoryShortName + ".json",
-    buildAndShowMenuItemsHTML);
-**/
   
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
@@ -129,23 +122,23 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content").className;
+      var homeHtmlToInsertIntoMainPage = document.querySelector("#specials-tile").className;
 /**
       var html = "<div class='text-center'>";
       html += "<img src='images/ajax-loader.gif'></div>";
 **/
-      /**
+      
       var html = homeHtmlToInsertIntoMainPage;
         insertProperty(html,
                        "short_name",
                        chosenCategoryShortName);
       homeHtmlToInsertIntoMainPage += html;
-**/
+
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
-      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      insertHtml("#specials-tile", homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 
