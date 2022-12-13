@@ -98,9 +98,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
 
+  var chosenCategoryShortName = chooseRandomCategory(categories);
     showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl + categoryShort + ".json",
+    menuItemsUrl + chosenCategoryShortName + ".json",
     buildAndShowMenuItemsHTML);
 
   /***
