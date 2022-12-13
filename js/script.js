@@ -123,26 +123,14 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
       var homeHtmlToInsertIntoMainPage = ""; //"pippo";
-      // Loop over categories
-      for (var i = 0; i < categories.length; i++) {
-        // Insert category values
-        var html = categoryHtml;
-        var name = "" + categories[i].name;
-        var short_name = categories[i].short_name;
-        html =
-          insertProperty(html, "name", name);
+
+        var html = homeHtmlUrl;
         html =
           insertProperty(html,
                          "short_name",
-                         short_name);
+                         chosenCategoryShortName);
         homeHtmlToInsertIntoMainPage += html;
       }
-      
-      /**buildCategoriesViewHtml(
-              categories,
-              categoriesTitleHtml,
-              categoryHtml
-            );**/
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
