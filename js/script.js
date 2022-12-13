@@ -14,8 +14,8 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
-var allCategoriesUrl = "data/name.json";
- //AleC "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
+var allCategoriesUrl = //AleC "data/name.json";
+  "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   $ajaxUtils.sendGetRequest(
     allCategoriesUrl,
-    /**
+    /** AleC
     [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
     true); // Explicitly setting the flag to get JSON from server processed into an object literal
     **/
