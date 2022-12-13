@@ -138,7 +138,7 @@ function buildAndShowHomeHTML (categories) {
      
       var queryUrlImage = "images/menu/" + short_name + "/" + short_name + ".jpg";
       var homeHtmlToInsertIntoMainPage = "<div class='text-center'>";
-      homeHtmlToInsertIntoMainPage += "<img width='200' height='200' src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+      homeHtmlToInsertIntoMainPage += "<img width='200' height='200'";
       homeHtmlToInsertIntoMainPage += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
  
       
