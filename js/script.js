@@ -160,7 +160,7 @@ function buildAndShowHomeHTML (categories) {
       
       var queryUrlImage = "images/menu/" + short_name + "/" + short_name + name + ".jpg";
       var homeHtmlToInsertIntoMainPage = "<div class='text-center'>";
-  html += "<img src='" + queryUrlImage + "'></div>";
+      homeHtmlToInsertIntoMainPage += "<img src='" + queryUrlImage + "'></div>";
  
       
       console.log(homeHtmlToInsertIntoMainPage);
