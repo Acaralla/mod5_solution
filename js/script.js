@@ -158,6 +158,7 @@ function buildAndShowHomeHTML (categories) {
                      "short_name",
                      short_name);
                      **/
+      /**
           html =
       insertProperty(html,
                      "randomCategoryShortName",
