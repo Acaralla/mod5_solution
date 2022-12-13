@@ -15,11 +15,11 @@ var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
-  "https://davids-restaurant.herokuapp.com/categories.json";
+  "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
-  "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
+  "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
@@ -83,10 +83,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
+
 
 // Builds HTML for the home page based on categories array
 // returned from the server.
@@ -151,7 +152,7 @@ dc.loadMenuCategories = function () {
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl + categoryShort,
+    menuItemsUrl + categoryShort + ".json",
     buildAndShowMenuItemsHTML);
 };
 
