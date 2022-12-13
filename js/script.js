@@ -122,7 +122,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = "pippo";
+      var homeHtmlToInsertIntoMainPage = ""; //"pippo";
       // Loop over categories
       for (var i = 0; i < categories.length; i++) {
         // Insert category values
@@ -135,7 +135,7 @@ function buildAndShowHomeHTML (categories) {
           insertProperty(html,
                          "short_name",
                          short_name);
-        finalHtml += html;
+        homeHtmlToInsertIntoMainPage += html;
       }
       
       /**buildCategoriesViewHtml(
@@ -148,7 +148,7 @@ function buildAndShowHomeHTML (categories) {
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
-      insertHtml("#main-content", finalHtml); //homeHtmlToInsertIntoMainPage);
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
