@@ -123,7 +123,7 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
       var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content").className;
-
+/*
       var html = "<div class='text-center'>";
       html += "<img src='images/ajax-loader.gif'></div>";
 
@@ -137,6 +137,12 @@ function buildAndShowHomeHTML (categories) {
       // of how to do that.
       // ....
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      
+      ????*/
+          showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    menuItemsUrl + chosenCategoryShortName + ".json",
+    homeHtmlUrl);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
