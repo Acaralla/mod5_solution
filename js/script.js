@@ -122,15 +122,15 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = ""; //"pippo";
+      var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content").className;
 
-      var html = homeHtmlUrl;
-      html =
+      var html = "<div class='text-center'>";
+      html += "<img src='images/ajax-loader.gif'></div>";
+
         insertProperty(html,
                        "short_name",
                        chosenCategoryShortName);
       homeHtmlToInsertIntoMainPage += html;
-    
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
