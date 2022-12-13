@@ -131,7 +131,7 @@ function buildAndShowHomeHTML (categories) {
                                     homeHtmlUrl);
         **/
       // var finalHtml = categoriesTitleHtml;
-   var finalHtml += "<section class='row'>";
+   var finalHtml = "<section class='row'>";
       
       /**
       
