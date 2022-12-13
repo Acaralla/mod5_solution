@@ -107,7 +107,8 @@ function buildAndShowHomeHTML (categories) {
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
-
+      //AleC
+      var chosenCategoryShortName = chooseRandomCategory(categories);
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -121,7 +122,22 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-            var homeHtmlToInsertIntoMainPage = "pippo";
+      var homeHtmlToInsertIntoMainPage = "pippo";
+      // Loop over categories
+      for (var i = 0; i < categories.length; i++) {
+        // Insert category values
+        var html = categoryHtml;
+        var name = "" + categories[i].name;
+        var short_name = categories[i].short_name;
+        html =
+          insertProperty(html, "name", name);
+        html =
+          insertProperty(html,
+                         "short_name",
+                         short_name);
+        finalHtml += html;
+      }
+      
       /**buildCategoriesViewHtml(
               categories,
               categoriesTitleHtml,
