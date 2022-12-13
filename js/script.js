@@ -136,6 +136,7 @@ function buildAndShowHomeHTML (categories) {
       var name = "" + chosenCategoryShortName.name;
       var short_name = chosenCategoryShortName.short_name;
      
+      /***
       homeHtmlToInsertIntoMainPage += "<section class='row'>";
 
   // Loop over categories
@@ -155,6 +156,13 @@ function buildAndShowHomeHTML (categories) {
   }
 
   homeHtmlToInsertIntoMainPage += "</section>";
+      ***/
+      
+      
+      var homeHtmlToInsertIntoMainPage = document.querySelector("#main-content");
+      homeHtmlToInsertIntoMainPage =
+        insertProperty(homeHtmlToInsertIntoMainPage, "src", 
+                       "images/menu/" + short_name + "/" + short_name + name + ".jpg");
       
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
