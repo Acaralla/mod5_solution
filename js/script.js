@@ -130,12 +130,24 @@ function buildAndShowHomeHTML (categories) {
                                     categoriesTitleHtml,
                                     homeHtmlUrl);
         **/
-       var finalHtml = categoriesTitleHtml;
-   finalHtml += "<section class='row'>";
+      // var finalHtml = categoriesTitleHtml;
+   var finalHtml += "<section class='row'>";
+      
+      /**
+      
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+  <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
+    <div class="category-tile">
+      <img width="200" height="200" src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+      <span>{{name}}</span>
+    </div>
+  </a>
+</div>
+**/
 
  
     // Insert category values
-    var html = categoryHtml;
+    var html = document.querySelector("#category-tile"); //categoryHtml;
     var name = "" + chosenCategoryShortName.name;
     var short_name = chosenCategoryShortName.short_name;
     html =
