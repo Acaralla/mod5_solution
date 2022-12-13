@@ -147,14 +147,20 @@ function buildAndShowHomeHTML (categories) {
 
  
     // Insert category values
-    var html = document.querySelector("#category-tile"); //categoryHtml;
+    var html = document.querySelector("#main-content"); //document.querySelector("#category-tile"); //categoryHtml;
     var name = "" + chosenCategoryShortName.name;
     var short_name = chosenCategoryShortName.short_name;
+      /**
     html =
       insertProperty(html, "name", name);
     html =
       insertProperty(html,
                      "short_name",
+                     short_name);
+                     **/
+          html =
+      insertProperty(html,
+                     "randomCategoryShortName",
                      short_name);
     finalHtml += html;
   
