@@ -135,33 +135,11 @@ function buildAndShowHomeHTML (categories) {
       // Insert category values
       var name = "" + chosenCategoryShortName.name;
       var short_name = chosenCategoryShortName.short_name;
-      var id = chosenCategoryShortName.id;
-      /***
-      homeHtmlToInsertIntoMainPage += "<section class='row'>";
-
-  // Loop over categories
-  for (var i = 0; i < categories.length; i++) {
-    // Insert category values
-    var html = document.querySelector("#main-content");
-    console.log(html);
-    var name = "" + categories[i].name;
-    var id = "" + categories[i].id;
-    var short_name = categories[i].short_name;
-    html =
-      insertProperty(html, "name", name);
-    html =
-      insertProperty(html,
-                     "short_name",
-                     short_name);
-    homeHtmlToInsertIntoMainPage += html;
-  }
-
-  homeHtmlToInsertIntoMainPage += "</section>";
-      ***/
-      
-      var queryUrlImage = "images/menu/" + short_name + "/" + short_name + id + ".jpg";
+     
+      var queryUrlImage = "images/menu/" + short_name + "/" + short_name + ".jpg";
       var homeHtmlToInsertIntoMainPage = "<div class='text-center'>";
-      homeHtmlToInsertIntoMainPage += "<img src='" + queryUrlImage + "'></div>";
+      homeHtmlToInsertIntoMainPage += "<img width='200' height='200' src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+      homeHtmlToInsertIntoMainPage += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
  
       
       console.log(homeHtmlToInsertIntoMainPage);
