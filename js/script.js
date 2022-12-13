@@ -135,7 +135,7 @@ function buildAndShowHomeHTML (categories) {
       // Insert category values
       var name = "" + chosenCategoryShortName.name;
       var short_name = chosenCategoryShortName.short_name;
-     
+      var id = chosenCategoryShortName.id;
       /***
       homeHtmlToInsertIntoMainPage += "<section class='row'>";
 
