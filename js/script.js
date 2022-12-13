@@ -89,13 +89,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     true); // Explicitly setting the flag to get JSON from server processed into an object literal
     **/
 
-            function (res) {
-              var message = 
-                res.name;
 
-              document.querySelector("#main-content")
-                .innerHTML = "<h2>" + message + "</h2>";
-      });
+    buildAndShowMenuItemsHTML);
+
   
 });
 // *** finish **
