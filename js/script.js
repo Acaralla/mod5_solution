@@ -98,6 +98,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
 
+    showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    menuItemsUrl + categoryShort + ".json",
+    buildAndShowMenuItemsHTML);
+};
+  /***
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
@@ -139,8 +145,9 @@ function buildAndShowHomeHTML (categories) {
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+**/
 }
-      
+
       /**
           showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
