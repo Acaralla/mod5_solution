@@ -127,8 +127,7 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
       var homeHtmlToInsertIntoMainPage = homeHtmlUrl; //document.querySelector("#main-content");
-      console.log(homeHtmlToInsertIntoMainPage);
-      
+    
       var htmlCategory = "";
       /*
       var name = "" + chosenCategoryShortName.name;
