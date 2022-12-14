@@ -41,8 +41,8 @@ var showLoading = function (selector) {
 // with propValue in given 'string'
 var insertProperty = function (string, propName, propValue) {
   var propToReplace = "{{" + propName + "}}";
-  console.log("replace: " + propToReplace + " CON " + propValue );
-  console.log("in " + string );
+  //console.log("replace: " + propToReplace + " CON " + propValue );
+  //console.log("in " + string );
   string = string
     .replace(new RegExp(propToReplace, "g"), propValue);
   return string;
@@ -128,26 +128,11 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = homeHtmlUrl; //document.querySelector("#main-content");
-    
-      var htmlCategory = "";
-      /*
-      var name = "" + chosenCategoryShortName.name;
-      var short_name = chosenCategoryShortName.short_name;
-      var queryUrlImage = "images/menu/" + short_name + "/" + short_name + ".jpg";
-      
-      htmlCategory = "<div class='text-center'>";
-      htmlCategory += "<img width='200' height='200'";
-      htmlCategory += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
- 
-      */
-      
-      homeHtmlToInsertIntoMainPage += htmlCategory;
-      
+      var homeHtmlToInsertIntoMainPage = homeHtmlUrl; //document.querySelector("#main-content");      
       homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage, 
                      "randomCategoryShortName", chosenCategoryShortName.short_name);
       
-      console.log(homeHtmlToInsertIntoMainPage);
+      //console.log(homeHtmlToInsertIntoMainPage);
       
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
