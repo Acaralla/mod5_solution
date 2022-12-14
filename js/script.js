@@ -127,6 +127,8 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
       var homeHtmlToInsertIntoMainPage = homeHtmlUrl; //document.querySelector("#main-content");
+      console.log(homeHtmlToInsertIntoMainPage);
+      
       var htmlCategory = "";
       /*
       var name = "" + chosenCategoryShortName.name;
@@ -138,9 +140,9 @@ function buildAndShowHomeHTML (categories) {
       htmlCategory += " src='" + queryUrlImage + "' alt='" + name + "' ></div>";
  
       */
-      console.log(htmlCategory);
+      
       homeHtmlToInsertIntoMainPage += htmlCategory;
-   
+      console.log(homeHtmlToInsertIntoMainPage);
       
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
